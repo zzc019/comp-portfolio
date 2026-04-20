@@ -21,10 +21,9 @@ const WIN_SIZES = {
   'win-p2':      { w: 0.70, h: 0.82 },
   'win-p3':      { w: 0.70, h: 0.82 },
   'win-p4':      { w: 0.70, h: 0.82 },
-  'win-p5':      { w: 0.70, h: 0.82 },
 };
 
-function applySize(id) {
+function applySize(id, cascadeIndex = 0) {
   const el = document.getElementById(id);
   const d  = document.getElementById('desktop');
   const s  = WIN_SIZES[id];
@@ -34,8 +33,17 @@ function applySize(id) {
   const hFrac = s.h || 0.75;
   el.style.maxHeight = Math.round(d.offsetHeight * hFrac) + 'px';
   if (!el._placed) {
-    el.style.left = Math.round((d.offsetWidth  - w) / 2) + 'px';
-    el.style.top  = Math.max(28, Math.round((d.offsetHeight - d.offsetHeight * hFrac) / 2)) + 'px';
+    const baseLeft = Number.parseInt(el.dataset.baseLeft || el.style.left, 10);
+    const baseTop = Number.parseInt(el.dataset.baseTop || el.style.top, 10);
+    const fallbackLeft = Math.round((d.offsetWidth - w) / 2);
+    const fallbackTop = Math.max(28, Math.round((d.offsetHeight - d.offsetHeight * hFrac) / 2));
+    const step = 28;
+    const offset = Math.min(cascadeIndex, 5) * step;
+    const nextLeft = (Number.isNaN(baseLeft) ? fallbackLeft : baseLeft) + offset;
+    const nextTop = (Number.isNaN(baseTop) ? fallbackTop : baseTop) + offset;
+
+    el.style.left = Math.min(nextLeft, Math.max(0, d.offsetWidth - w - 16)) + 'px';
+    el.style.top = Math.min(nextTop, Math.max(28, d.offsetHeight - 120)) + 'px';
   }
 }
 
@@ -65,15 +73,16 @@ function tickCheck(key) {
 function openW(name) {
   const id = 'win-' + name;
   const el = document.getElementById(id);
+  const visibleCount = document.querySelectorAll('.win:not(.hidden)').length;
   el.classList.remove('hidden');
-  applySize(id);
+  applySize(id, visibleCount);
   el._placed = true;
   bringToFront(id);
   if (name === 'about')   tickCheck('about');
   if (name === 'contact') tickCheck('contact');
   if (name === 'designs') tickCheck('designs');
   if (name === 'resume')  tickCheck('resume');
-  if (['p1','p2','p3','p4','p5'].includes(name)) tickCheck('project');
+  if (['p1','p2','p3','p4'].includes(name)) tickCheck('project');
 }
 
 function closeW(id) {
