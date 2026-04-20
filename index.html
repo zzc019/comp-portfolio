@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sherise Cheung — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="desktop">
+
+  <!-- ══ MENU BAR ══ -->
+  <div id="menubar">
+    <span class="apple">◆</span>
+    <span class="mi">file</span>
+    <span class="mi">edit</span>
+    <span class="mi">view</span>
+    <span class="mi">help</span>
+    <span id="clk">--:--</span>
+  </div>
+
+  <!-- ══ DESKTOP ICONS ══ -->
+  <div class="icon-grid">
+    <div class="icon" onclick="openW('about')" id="icon-about">
+      <div class="ibox"><svg class="isvg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="ilbl">About</div>
+    </div>
+    <div class="icon" onclick="openW('contact')" id="icon-contact">
+      <div class="ibox"><svg class="isvg" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></div>
+      <div class="ilbl">Contact</div>
+    </div>
+    <div class="icon" onclick="openW('designs')" id="icon-designs">
+      <div class="ibox"><svg class="isvg" viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v12H3z"/><rect x="8" y="12" width="8" height="5"/></svg></div>
+      <div class="ilbl">Designs</div>
+    </div>
+    <div class="icon" onclick="openW('resume')" id="icon-resume">
+      <div class="ibox"><svg class="isvg" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg></div>
+      <div class="ilbl">Resume</div>
+    </div>
+  </div>
+
+  <!-- ══ CHECKLIST WIDGET ══ -->
+  <div id="checklist-widget">
+    <div class="wid-title">✦ Get to know me</div>
+    <ul>
+      <li id="cl-about">
+        <div class="chk-box"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>
+        <span>Peek into my About folder</span>
+      </li>
+      <li id="cl-designs">
+        <div class="chk-box"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>
+        <span>Browse my designs</span>
+      </li>
+      <li id="cl-project">
+        <div class="chk-box"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>
+        <span>Dive into one of my projects</span>
+      </li>
+      <li id="cl-resume">
+        <div class="chk-box"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>
+        <span>Check out my resume</span>
+      </li>
+      <li id="cl-contact">
+        <div class="chk-box"><svg viewBox="0 0 8 8"><polyline points="1,4 3,6 7,2"/></svg></div>
+        <span>Grab my contact info</span>
+      </li>
+    </ul>
+    <div class="wid-footer">
+      <span id="cl-count">0 / 5 explored</span>
+      <div class="progress-bar"><div class="progress-fill" id="cl-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ABOUT WINDOW
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-about" style="top:42px;left:90px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-about')">
+      <div class="tbtn" onclick="closeW('win-about')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-about')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">About Me</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+
+      <h2>A Little About Me</h2>
+      <p>I'm Sherise, and I'm passionate about creating designs that not only look good but also make interactions intuitive and effortless for users. I often jump between ideas, constantly exploring ways to improve previous concepts and refine my designs.</p>
+
+      <div class="about-hero">
+        <img src="https://framerusercontent.com/images/vA2Llij1fXRVHpg2dzEoycQt5wY.jpg?width=1079" alt="Sherise Cheung" />
+      </div>
+
+      <h3>Design Philosophy</h3>
+      <p>Being an interaction designer means more than creating visually engaging interfaces; it requires building experiences that smoothly connect people with technology. I focus on observing and understanding how people interact, think and respond in digital environments to create design that not only captures attention but also allows users to easily achieve their goals.</p>
+      <p>The Honours Bachelor of Interaction Design program at Sheridan College has shaped my approach to design, helping me focus not only on visual outcomes but also on promoting accessibility, efficiency, and meaningful interactions.</p>
+      <p>I believe that creating a high-quality design solution would require me to be adaptable and have a deep understanding of which design methods and styles best suit the users' needs. That's why I'm actively looking for feedback from diverse perspectives, helping them reveal opportunities to make informed, inclusive, and realistic design decisions.</p>
+      <p>My ultimate goal is to create solutions that enhance the user experience while ensuring accessibility and inclusivity.</p>
+
+      <hr class="divider" />
+
+      <h3>My Interests</h3>
+      <p>Outside of interaction design, I enjoy travelling, capturing unique moments or small details through photography. I'm also passionate about exploring different cultures through their historical monuments and food, explore in art galleries and museums, and trying new things such as glass art, skiing, and wakeboarding.</p>
+
+      <!-- Auto-scrolling gallery -->
+      <div class="gallery-track-wrap">
+        <div class="gallery-track" id="gallery-track">
+          <img src="https://framerusercontent.com/images/e8EJYKw1kU94nt2t3UbNR8odMt8.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/zt3i5d0ioDeJ0FBup7N9LqODFL4.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/ZiHdpfgiTRBQ22aZxgDE22WWE10.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/UXBpBYjKHT6ACQl7xeAgSB9myM.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/jYNs7VPYpqqwHa9faT3cpmxryqc.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/UiQ4Q1UHmMhpRiZXNyKbRWuq0.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/4E6KsYU2h8d3vbxCRuO2avc2gE.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/tCkNnq7tFxtg6K2QLWwIDX88.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/EcegS5tIapHhH5roeHxtpcDUl8.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/KJp9WzGpzDq1lQ3rlBhIX6tsmY.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/0vPEmxotcuzz6zGSGk0Lm4Izzw.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/NLEozh6d8036J94w0pEVvfYwyKM.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/iLWanE0zCYN2OQAdqIg4vHyYkQE.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/RxLwV4rXvcUipyFfEJwBhD6Y7g.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/TqIN7LmGJH9JTTz4uGD0RIdywg.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/Rkc2nnavAnn9OSFyrr1dQuRdZ8M.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/2mbl3M213Fht2uZqOYusyWyixs.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/FaMS2MFNEnOSXDsGarnfzGjKH0.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/yZcvTaXQWT0sUCUsrDEk9W3c.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/mSUPIN8xH6aRapE5Sija0XH856c.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/5DuwsSWnwLT7UplCkaXPcEilPz4.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/Ls67JNRJGM9BUwmZysN4XtJrV8.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/LEHFQCXW5LWIt9Gq6MXrw3RvBzk.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/2I4k0sDBbkMn3xImnHG3OY2XO30.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/pD9AyDkvefdYgOYjMoZ1ZRHzb8c.jpg?width=400" alt="" />
+          <!-- Duplicate set for seamless loop -->
+          <img src="https://framerusercontent.com/images/e8EJYKw1kU94nt2t3UbNR8odMt8.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/zt3i5d0ioDeJ0FBup7N9LqODFL4.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/ZiHdpfgiTRBQ22aZxgDE22WWE10.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/UXBpBYjKHT6ACQl7xeAgSB9myM.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/jYNs7VPYpqqwHa9faT3cpmxryqc.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/UiQ4Q1UHmMhpRiZXNyKbRWuq0.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/4E6KsYU2h8d3vbxCRuO2avc2gE.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/tCkNnq7tFxtg6K2QLWwIDX88.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/EcegS5tIapHhH5roeHxtpcDUl8.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/KJp9WzGpzDq1lQ3rlBhIX6tsmY.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/0vPEmxotcuzz6zGSGk0Lm4Izzw.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/NLEozh6d8036J94w0pEVvfYwyKM.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/iLWanE0zCYN2OQAdqIg4vHyYkQE.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/RxLwV4rXvcUipyFfEJwBhD6Y7g.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/TqIN7LmGJH9JTTz4uGD0RIdywg.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/Rkc2nnavAnn9OSFyrr1dQuRdZ8M.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/2mbl3M213Fht2uZqOYusyWyixs.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/FaMS2MFNEnOSXDsGarnfzGjKH0.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/yZcvTaXQWT0sUCUsrDEk9W3c.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/mSUPIN8xH6aRapE5Sija0XH856c.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/5DuwsSWnwLT7UplCkaXPcEilPz4.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/Ls67JNRJGM9BUwmZysN4XtJrV8.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/LEHFQCXW5LWIt9Gq6MXrw3RvBzk.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/2I4k0sDBbkMn3xImnHG3OY2XO30.jpg?width=400" alt="" />
+          <img src="https://framerusercontent.com/images/pD9AyDkvefdYgOYjMoZ1ZRHzb8c.jpg?width=400" alt="" />
+        </div>
+      </div>
+
+      <hr class="divider" />
+      <h2>Skills</h2>
+      <div>
+        <span class="tag">UI/UX Design</span><span class="tag">Branding</span><span class="tag">Prototyping</span>
+        <span class="tag">HTML/CSS/JS</span><span class="tag">Arduino</span><span class="tag">User Research</span>
+        <span class="tag">Wireframing</span><span class="tag">Digital Fabrication</span>
+      </div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>about_me.txt</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CONTACT WINDOW
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-contact" style="top:65px;left:145px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-contact')">
+      <div class="tbtn" onclick="closeW('win-contact')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-contact')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">Contact</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>Interested in Connecting?</h2>
+      <p>If you'd like to discuss my work or potential opportunities, I'd be happy to hear from you.</p>
+      <hr class="divider" />
+      <div class="crow"><span class="clbl">Email</span><span class="cval">cheungsh@sheridancollege.ca</span></div>
+      <div class="crow"><span class="clbl">Web</span><span class="cval">sherisecheung.framer.website</span></div>
+      <div class="crow"><span class="clbl">LinkedIn</span><span class="cval">linkedin.com/in/sherisecheung</span></div>
+      <hr class="divider" />
+      <p class="meta">© 2025 Sherise Cheung</p>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>contact.txt</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       DESIGNS FOLDER
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-designs" style="top:52px;left:118px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-designs')">
+      <div class="tbtn" onclick="closeW('win-designs')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-designs')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">Designs</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>My Designs</h2>
+      <p class="sub-note">Digital interfaces, branding, and data visualization — all connected by interaction design.</p>
+      <div class="folder-grid">
+        <div class="fitem" onclick="openW('p1')">
+          <svg width="34" height="28" viewBox="0 0 34 28"><rect x="1" y="6" width="32" height="21" rx="1" fill="#ddd" stroke="#888" stroke-width="1"/><rect x="1" y="2" width="12" height="6" rx="1" fill="#ccc" stroke="#888" stroke-width="1"/></svg>
+          <span>MoodLife</span>
+        </div>
+        <div class="fitem" onclick="openW('p2')">
+          <svg width="34" height="28" viewBox="0 0 34 28"><rect x="1" y="6" width="32" height="21" rx="1" fill="#ddd" stroke="#888" stroke-width="1"/><rect x="1" y="2" width="12" height="6" rx="1" fill="#ccc" stroke="#888" stroke-width="1"/></svg>
+          <span>The Eclipse</span>
+        </div>
+        <div class="fitem" onclick="openW('p3')">
+          <svg width="34" height="28" viewBox="0 0 34 28"><rect x="1" y="6" width="32" height="21" rx="1" fill="#ddd" stroke="#888" stroke-width="1"/><rect x="1" y="2" width="12" height="6" rx="1" fill="#ccc" stroke="#888" stroke-width="1"/></svg>
+          <span>Dionysus in Ekstasis</span>
+        </div>
+        <div class="fitem" onclick="openW('p4')">
+          <svg width="34" height="28" viewBox="0 0 34 28"><rect x="1" y="6" width="32" height="21" rx="1" fill="#ddd" stroke="#888" stroke-width="1"/><rect x="1" y="2" width="12" height="6" rx="1" fill="#ccc" stroke="#888" stroke-width="1"/></svg>
+          <span>Uber Eats Data</span>
+        </div>
+        <div class="fitem" onclick="openW('p5')">
+          <svg width="34" height="28" viewBox="0 0 34 28"><rect x="1" y="6" width="32" height="21" rx="1" fill="#ddd" stroke="#888" stroke-width="1"/><rect x="1" y="2" width="12" height="6" rx="1" fill="#ccc" stroke="#888" stroke-width="1"/></svg>
+          <span>Caturday Coffee</span>
+        </div>
+      </div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>5 projects</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECT 1: MOODLIFE
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-p1" style="top:90px;left:175px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-p1')">
+      <div class="tbtn" onclick="closeW('win-p1')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-p1')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">MoodLife</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>MoodLife</h2>
+      <div class="meta-grid">
+        <div class="meta-cell"><div class="mk">Role</div><div class="mv">UX/UI Designer, Product Designer</div></div>
+        <div class="meta-cell"><div class="mk">Industry</div><div class="mv">Lifestyle, Health &amp; Wellness</div></div>
+        <div class="meta-cell"><div class="mk">Timeline</div><div class="mv">2 weeks (2025)</div></div>
+      </div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/EKrexYD8GJGmT5NQ65jwHVnYsI.png?width=1200" alt="MoodLife"/></div>
+      <a class="proj-link" href="https://project3moodtrackerv2-xnkm.vercel.app/index.html" target="_blank">↗ View Live Project</a>
+
+      <h3>Context</h3>
+      <p>MoodLife is a mood-tracking mobile application designed to move beyond passive mood logging and journaling. It enables users to capture daily emotional states and correlate them with lifestyle factors such as sleep, exercise, hobbies, meals, social interaction, weather, and menstrual cycles to surface personalized patterns and triggers.</p>
+      <p>By integrating Google Gemini, MoodLife translates emotional and contextual data into supportive, situational insights and gentle encouragement. This allows users to gain self-awareness quickly and make informed lifestyle adjustments that support long-term emotional well-being.</p>
+
+      <h3>Understanding the Problem</h3>
+      <p>Many mood-tracking apps rely heavily on detailed manual journaling. Users often abandon these tools because logging emotions feels time-consuming, cognitively demanding, and difficult to sustain over time.</p>
+      <p>This problem is particularly pronounced for younger users (Gen Z and Alpha), who are accustomed to fast-paced, low-friction digital experiences. When emotional tracking requires effort, reflection, or lengthy input, engagement drops, and meaningful insights are never reached.</p>
+
+      <h3>Product Goals</h3>
+      <p>The product needed to:</p>
+      <ul>
+        <li>Reduce friction in mood tracking by minimizing manual input</li>
+        <li>Enable faster emotional capture</li>
+        <li>Capture meaningful patterns and triggers automatically</li>
+        <li>Provide supportive suggestions rather than raw data</li>
+      </ul>
+      <p>Success for users meant completing mood tracking in seconds and receiving guidance that felt relevant, personal, and achievable.</p>
+
+      <h3>Process &amp; Approach</h3>
+      <p>To ensure that the final product meets both technical and user needs, I explored the problem through a combination of research, system planning, and rapid experimentation. This included competitive analysis of existing mood-tracking products, system mapping and UML use-case diagrams to define data relationships, and research into Google Gemini's API to understand how emotional data could be transformed into contextual insights.</p>
+
+      <h3>Typography</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/vuWI18W01MLHUy6RtTQLyAmqDxA.png?width=1200" alt="Typography — Lexend Deca"/></div>
+      <p>For the primary font, I chose Lexend Deca for the title and subheadings, as it's a clean, modern, and slightly rounded font, leaving users with the impression that the content will be gentle, friendly, and approachable.</p>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/G9ag7Gtf3V16z5O4QMH1F1K2TcE.png?width=1200" alt="Typography — Open Sans"/></div>
+      <p>For the secondary font, I chose Open Sans as it supports the primary font and ensures readability while giving a pleasant vibe.</p>
+
+      <h3>Moodboard &amp; Colour Studies</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/gX08trwcB8Ah9JxoRc7tJEM.jpg?width=1200" alt="Moodboard"/></div>
+      <p>These approaches were intentionally selected to expand my understanding of building an end-to-end product that integrates frontend, backend, and AI-driven logic.</p>
+
+      <h3>Design Decisions &amp; Trade-offs</h3>
+      <p>Due to time and technical constraints, the p5.js emotion detection was not as accurate or granular as desired. However, it served as a functional proof of concept for rapid emotional input. This trade-off prioritized speed and feasibility over precision, enabling the core interaction to be tested and validated within the project scope.</p>
+
+      <h3>Delivery &amp; Build</h3>
+      <p>The prototype was built using HTML, CSS, and JavaScript, deployed via Vercel, with MongoDB handling data storage. Google Gemini was integrated to generate contextual insights from mood and trigger data.</p>
+
+      <h3>Results</h3>
+      <ul>
+        <li>Delivered a working prototype aligned with the original product vision</li>
+        <li>Successfully integrated frontend, backend, and AI services</li>
+        <li>Validated a low-friction approach to mood tracking through interaction design</li>
+      </ul>
+
+      <h3>Reflection</h3>
+      <p>This project significantly expanded my understanding on full-stack development and API Integration. I gained hands-on experience with p5.js, backend architecture, and API implementation to enhance product functionality. If I were to revisit this project, I would explore alternative emotional recognition technologies to improve the emotional accuracy and depth.</p>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Rapid mood tracking reduces friction compared to manual journaling</li>
+        <li>Correlating mood with sleep, exercise, meals, and social interactions highlights meaningful patterns</li>
+        <li>Contextual recommendations turn data into actionable guidance for positive behavior change</li>
+        <li>Testing p5.js emotion capture and Google Gemini integration helped identify technical and UX limitations early</li>
+        <li>Implementing full-stack features broadened functionality and strengthened system understanding</li>
+      </ul>
+
+      <div style="margin-top:12px;"><span class="tag">App Design</span><span class="tag">UI/UX</span><span class="tag">HTML/CSS/JS</span><span class="tag">Prototyping</span><span class="tag">Google Gemini</span><span class="tag">MongoDB</span></div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>moodproject/</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECT 2: THE ECLIPSE
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-p2" style="top:95px;left:185px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-p2')">
+      <div class="tbtn" onclick="closeW('win-p2')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-p2')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">The Eclipse</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>The Eclipse</h2>
+      <div class="meta-grid">
+        <div class="meta-cell"><div class="mk">Role</div><div class="mv">Physical Computing Designer</div></div>
+        <div class="meta-cell"><div class="mk">Industry</div><div class="mv">Creative Art &amp; Interactive Media</div></div>
+        <div class="meta-cell"><div class="mk">Timeline</div><div class="mv">2 weeks (2025)</div></div>
+      </div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/NudNhLHtXcbAkyDotM72PjWK8.png?width=1200" alt="The Eclipse"/></div>
+
+      <h3>Context</h3>
+      <p>Eclipse is a collaborative interactive installation created by a team of two that explores changes through light, gesture, and generative particle systems. As users rotate a physical moon model, scattered particles gradually form moon phases before dissolving back into chaos, reflecting cycles of time, change, and memory. This immersive visual experience invites slow, reflective engagement between the user, the system, and the environment.</p>
+
+      <h3>Understanding the Problem</h3>
+      <p>Many digital interactions prioritize speed, utility, and outcomes, leaving little room for emotional reflection. Interactive technologies often become tools to optimize behaviour rather than mediums for contemplation. Eclipse responds to this gap by exploring how technology can be expressive rather than functional, using interaction not to solve a problem, but to evoke feeling, awareness, and stillness through participation.</p>
+
+      <h3>Product Goals</h3>
+      <p>The redesigned experience needed to:</p>
+      <ul>
+        <li>Translate abstract concepts (time, cycles) into tangible interaction</li>
+        <li>Encourage slow, intentional engagement rather than task completion</li>
+        <li>Create an emotionally resonant experience through light, motion, and form</li>
+      </ul>
+      <p>Success was defined by emotional clarity and the level of user engagement.</p>
+
+      <h3>Process &amp; Approach</h3>
+      <p>The project evolved across three stages. Early exploration focused on curiosity and experimentation, testing how sensors, projection, and movement could respond to human presence. As the concept matured, we refined the interaction model to be more cohesive and intentional, aligning gesture, light input, and visual storytelling.</p>
+      <p>My focus was on building and iterating the physical prototype using Arduino, sensors, and tactile controls, while my teammate developed the generative visuals in TouchDesigner. Frequent feedback from other classmates informed adjustments to usability, clarity, and responsiveness.</p>
+
+      <h3>Stage 1: Early Prototype Proposal</h3>
+      <p>Eclipse is an interactive artwork that visualizes moon phases through the emergent behaviour of particles. As users select different dates, scattered particles gradually form the corresponding moon phase before dissolving back into chaos and reforming in a new configuration, reflecting the cyclical nature of time, change, and memory.</p>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/wnDnmxd6NEwr7LzR0d9ngZo6h8.jpg?width=800" alt="Early prototype"/></div>
+
+      <h3>Stage 2: Testing Prototype</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/8wLQgQHPVkH2wTEfWnzg4TN3yTI.jpg?width=800" alt="Testing prototype"/></div>
+      <p>As the project progressed, we tested knowns and unknowns across software, hardware, interaction, and materials. Early technical limitations, such as the potentiometer's lack of precision, required reframing the original concept from exact calendar-based moon phases to a broader, more poetic simulation of the lunar cycle.</p>
+      <div class="img-row">
+        <div class="proj-img"><img src="https://framerusercontent.com/images/5z1XNPD79HR4CzEH2kKdx9hnI.jpg?width=800" alt="Process 1"/></div>
+        <div class="proj-img"><img src="https://framerusercontent.com/images/WfJXZldxWsVwvdGvyPp97BRuHo.jpg?width=800" alt="Process 2"/></div>
+      </div>
+      <p>We validated core interactions by building and testing a working physical prototype, ensuring that the rotary knob smoothly controlled phase transitions and the light sensor meaningfully influenced brightness.</p>
+      <div class="img-row">
+        <div class="proj-img"><img src="https://framerusercontent.com/images/uLXjoXqSHDONGOVFq0bsQrqLRg.jpg?width=800" alt="Process 3"/></div>
+        <div class="proj-img"><img src="https://framerusercontent.com/images/pA1Yc9zhzqRHQWJbRmXdb506MBk.jpg?width=800" alt="Process 4"/></div>
+      </div>
+
+      <h3>Stage 3: Refine and Finalize Prototype</h3>
+      <p>Throughout the process, peer feedback played a key role in making the prototype user-friendly. Testing revealed that combining two inputs — rotational control and light-based interaction — created a clearer interaction hierarchy and a more engaging experience.</p>
+      <div class="img-row">
+        <div class="proj-img"><img src="https://framerusercontent.com/images/a5mUNS94M4OLPPKPBQwUyFZhfIc.jpg?width=800" alt="Final 1"/></div>
+        <div class="proj-img"><img src="https://framerusercontent.com/images/MNUgy5mn9t25hTN6f78Rli0hnHw.jpg?width=800" alt="Final 2"/></div>
+      </div>
+
+      <div style="margin-top:12px;"><span class="tag">Art Installation</span><span class="tag">Prototyping</span><span class="tag">Digital Fabrication</span><span class="tag">Arduino</span><span class="tag">TouchDesigner</span></div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>eclipseproject/</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECT 3: DIONYSUS
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-p3" style="top:100px;left:195px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-p3')">
+      <div class="tbtn" onclick="closeW('win-p3')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-p3')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">Dionysus in Ekstasis</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>Dionysus in Ekstasis</h2>
+      <div class="meta-grid">
+        <div class="meta-cell"><div class="mk">Role</div><div class="mv">Physical Interaction Designer &amp; Narrative Experience Creator</div></div>
+        <div class="meta-cell"><div class="mk">Industry</div><div class="mv">Speculative Interaction Design &amp; Immersive Narrative</div></div>
+        <div class="meta-cell"><div class="mk">Timeline</div><div class="mv">3 months</div></div>
+      </div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/7MLPMszLbHles2jO5qFzDwz3I.jpg?width=1200" alt="Dionysus in Ekstasis"/></div>
+
+      <h3>Context</h3>
+      <p>This interactive narrative reimagines the Greek god Dionysus stepping into a distorted modern university campus. Instead of portraying addiction as chaotic excess, the project frames it as a subtle, dreamlike state woven into everyday pressures such as productivity demands, academic anxiety, FOMO, escapism through scrolling/gaming/partying, and the quiet guilt that follows. Users experience the story through Dionysus's perspective, guided by a supportive Satyr chatbot and interrupted by Apollo's judgmental voice. The experience spans a website, AR maze, VR environment, physical laser-cut map, and final puzzle artifact to create a seamless blend of digital and tangible interaction.</p>
+
+      <h3>Understanding the Problem</h3>
+      <p>Young adults (18–30) in high-pressure environments often normalize unhealthy escapism as "deserved rest" or "just one more scroll/party/game." They juggle student life, early careers, unstable finances, and constant connectivity, leading to loss of time, guilt vs. autonomy clashes, and difficulty recognizing gradual behavioural loops. Traditional warnings feel lecturing; this project lets users experientially discover how small, justified choices can quietly trap them in repetition without overt crisis.</p>
+
+      <h3>Product Goals</h3>
+      <ul>
+        <li>Create an engaging, non-linear narrative that mirrors unconscious daily routines.</li>
+        <li>Blend myth, modern campus life, and multi-platform interaction (web → AR → VR → physical) to make abstract concepts of addiction feel personal and familiar.</li>
+        <li>Guide users through psychological stages: attraction → immersion → repetition → disorientation → potential recognition.</li>
+        <li>Connect digital interfaces with physical artifacts for a holistic, memorable experience.</li>
+      </ul>
+
+      <h3>Process &amp; Approach</h3>
+      <p>I began with deep user research into the target audience's pain points and mapped them onto Dionysus's and Apollo's contrasting personas. My core responsibilities included writing all scripts and character documentation, designing the poster composition and laser-cut map files, recording voice-overs, and handling slide deck typography.</p>
+      <ul>
+        <li><strong>Rita</strong> led art direction, character + background design, map wrap painting, and video editing.</li>
+        <li><strong>Xinyu</strong> built the website, integrated digital artifacts (roleplay + chatbot), and handled music editing.</li>
+        <li><strong>Ethan</strong> developed the AR and VR experiences and managed equipment installation.</li>
+      </ul>
+
+      <h3>Character Description &amp; Settings Documents</h3>
+      <div class="img-row">
+        <div class="proj-img"><img src="https://framerusercontent.com/images/NQ38NFyrzDCHPfM7TKPXFLAwYCA.png?width=800" alt="Character doc v1"/></div>
+        <div class="proj-img"><img src="https://framerusercontent.com/images/l4LHpvhAapMRBPyTQbwDu1iuj8.png?width=800" alt="Character doc v2"/></div>
+      </div>
+
+      <h3>Poster</h3>
+      <div class="img-row">
+        <div class="proj-img"><img src="https://framerusercontent.com/images/LptnUsR32QQxqTwNUH4k4pkjylY.jpg?width=800" alt="Poster"/></div>
+        <div class="proj-img"><img src="https://framerusercontent.com/images/7MLPMszLbHles2jO5qFzDwz3I.jpg?width=800" alt="Final poster"/></div>
+      </div>
+
+      <h3>Website and Satyr Chatbot</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/oPyjc0m4v4kz2enTqWjRh9W7a8.png?width=1200" alt="Website chatbot"/></div>
+      <a class="proj-link" href="https://lucine1010.github.io/dionysus-trial-v2/" target="_blank">↗ Link to Main Website</a>
+
+      <h3>Laser Cut Maze Map</h3>
+      <div class="img-row">
+        <div class="proj-img"><img src="https://framerusercontent.com/images/bstpI1BMrntHLMm8XIM7J3CY.jpg?width=800" alt="Maze map v1"/></div>
+        <div class="proj-img"><img src="https://framerusercontent.com/images/bTz0MCl34FEgbEHohJ34XdCgY.jpg?width=800" alt="Maze map detail"/></div>
+      </div>
+
+      <div style="margin-top:12px;"><span class="tag">Prototyping</span><span class="tag">UX/UI Design</span><span class="tag">Digital Fabrication</span><span class="tag">User Research</span><span class="tag">Narrative Design</span><span class="tag">AR/VR</span></div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>dionysusinekstasis/</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECT 4: UBER EATS
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-p4" style="top:105px;left:205px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-p4')">
+      <div class="tbtn" onclick="closeW('win-p4')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-p4')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">Data Transparency — Uber Eats</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>Data Transparency for Uber Eats</h2>
+      <div class="meta-grid">
+        <div class="meta-cell"><div class="mk">Role</div><div class="mv">Product Designer</div></div>
+        <div class="meta-cell"><div class="mk">Industry</div><div class="mv">Creative Art &amp; Interactive Media</div></div>
+        <div class="meta-cell"><div class="mk">Timeline</div><div class="mv">2 weeks (2024)</div></div>
+      </div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/2nrnaaSKE6V2nIjOAIVmgX5NU.png?width=1200" alt="Uber Eats Data Transparency"/></div>
+
+      <h3>Context</h3>
+      <p>Uber Eats is one of the most widely used food delivery platforms globally, offering speed and personalization on a large scale. That personalization, however, relies heavily on user data — much of which is collected with minimal user understanding. This project explores how the privacy and cookie consent experience could be redesigned to make data collection more transparent, approachable, and user-controlled. The goal was to shift consent from a passive "Accept All" behaviour into an informed, intentional decision-making process without sacrificing usability.</p>
+
+      <h3>Understanding the Problem</h3>
+      <p>Most users skip privacy policies entirely, accepting cookies by default to unblock the interface and continue their task. Long legal documents, unclear terminology, and poor affordances discourage meaningful engagement with privacy settings. This creates a disconnect between the amount of data being collected and the user's awareness or comfort with that exchange.</p>
+
+      <h3>Product Goals</h3>
+      <ul>
+        <li>Increase transparency around what data is collected and why</li>
+        <li>Give users granular control over what they choose to share</li>
+        <li>Reduce cognitive load during consent decisions</li>
+        <li>Encourage informed action without disrupting task flow</li>
+      </ul>
+
+      <h3>Process &amp; Approach</h3>
+      <p>To understand user behaviour and expectations, I began with research into Uber Eats' primary audience demographics and usage patterns, followed by a competitive analysis of existing privacy experiences across major platforms. Insights from Uber Eats, Instagram, and Pinterest revealed clear patterns around clarity, control, and visual hierarchy.</p>
+
+      <h3>Low-Fidelity Wireframes</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/o0ZIVuFuiJp82h9CGjCgXYxmzo.png?width=1200" alt="Lo-fi wireframes A"/></div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/59bgKavObKxSKtTumadiKNs2HNM.png?width=1200" alt="Lo-fi wireframes B"/></div>
+
+      <h3>Mid-Fidelity Wireframes</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/TXihMnXD6kWcZAijZd7Wxfx3lKE.png?width=1200" alt="Mid-fi wireframes"/></div>
+
+      <h3>High-Fidelity Wireframes</h3>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/Vi7dFUDUjLANtxslPTGhZ0p1Jo.png?width=1200" alt="Hi-fi A"/></div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/9l7Z0MhcOZ45EZakrmILckYxe5A.png?width=1200" alt="Hi-fi B"/></div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/cOmblitA05ZJMUIcOaYcvWzUuIc.png?width=1200" alt="Hi-fi C"/></div>
+      <p>After receiving feedback, I created a second high-fidelity wireframe to refine the user flow. The new ordering made the overall experience feel smoother. I also made minor adjustments to the illustrations to reinforce the food concept.</p>
+
+      <h3>Solution</h3>
+      <p>The final solution redesigns privacy consent as a guided, user-centered flow rather than a legal barrier. Data categories are clearly labelled, expandable, and adjustable, allowing users to make decisions incrementally. The experience emphasizes transparency while maintaining brand consistency and task continuity.</p>
+
+      <h3>Key Design Decisions</h3>
+      <ul>
+        <li>Centralized pop-up layout to encourage attention and reduce dismissal behaviour</li>
+        <li>Progress indicators and back navigation to support user control</li>
+        <li>Illustrations tied to food and cookies to reinforce context and reduce intimidation</li>
+        <li>Consistent brand styling to maintain trust and familiarity</li>
+      </ul>
+
+      <h3>Results</h3>
+      <ul>
+        <li>Improved emotional response scores from 3–4 to 4–5 across testing rounds</li>
+        <li>Increased user confidence and clarity during consent decisions</li>
+        <li>Validated that visual hierarchy and progressive disclosure significantly improve engagement with privacy content</li>
+      </ul>
+
+      <h3>Reflection</h3>
+      <p>This project highlighted how poorly designed privacy experiences undermine user trust at critical moments. If revisiting this work, I would explore alternative data visualizations and interactive patterns to further humanize consent.</p>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Learned and applied new UX methods (A/B testing, As-is and To-be analysis, and emoticon score method)</li>
+        <li>Recognized that presenting data clearly directly impacts user trust and engagement</li>
+        <li>Transparency as a design responsibility, not a compliance checkbox</li>
+      </ul>
+
+      <div style="margin-top:12px;"><span class="tag">User Research</span><span class="tag">Wireframing</span><span class="tag">Usability Testing</span><span class="tag">UX/UI</span><span class="tag">A/B Testing</span></div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>dataproject/</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECT 5: CATURDAY
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-p5" style="top:110px;left:215px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-p5')">
+      <div class="tbtn" onclick="closeW('win-p5')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-p5')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">Caturday Coffee</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent">
+      <h2>Caturday Coffee</h2>
+      <div class="meta-grid">
+        <div class="meta-cell"><div class="mk">Role</div><div class="mv">Brand Designer</div></div>
+        <div class="meta-cell"><div class="mk">Industry</div><div class="mv">Branding</div></div>
+        <div class="meta-cell"><div class="mk">Timeline</div><div class="mv">2025</div></div>
+      </div>
+      <div class="proj-img"><img src="https://framerusercontent.com/images/x28WMEmAs2UJa4gJt2PpINDg4.png?width=1200" alt="Caturday Coffee"/></div>
+      <h3>Overview</h3>
+      <p>Cat Cafe logo design inspired by the phrase "Cats are made of liquid." A full visual identity exploration including research, logo design, visual design, and branding system.</p>
+      <div style="margin-top:12px;"><span class="tag">Research</span><span class="tag">Logo Design</span><span class="tag">Visual Design</span><span class="tag">Branding</span></div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>caturdayproject/</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       RESUME WINDOW
+  ══════════════════════════════════════ -->
+  <div class="win hidden" id="win-resume" style="top:48px;left:100px;">
+    <div class="tbar" onmousedown="startDrag(event,'win-resume')">
+      <div class="tbtn" onclick="closeW('win-resume')"><svg viewBox="0 0 8 8"><line x1="1" y1="1" x2="7" y2="7"/><line x1="7" y1="1" x2="1" y2="7"/></svg></div>
+      <div class="maxbtn" onclick="toggleMax('win-resume')"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6"/></svg></div>
+      <div class="wtitle">Resume — Sherise Cheung</div>
+      <div class="wsp"></div>
+    </div>
+    <div class="wcontent resume-layout">
+      <div class="res-left">
+        <div class="res-name">
+          <span class="res-first">Sherise</span>
+          <span class="res-last">Cheung</span>
+          <div class="res-title">3rd Year Interaction Design Student</div>
+        </div>
+        <hr class="divider"/>
+        <div class="res-section">
+          <h2>Contact</h2>
+          <div class="res-row"><svg class="res-icon" viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1"/><path d="M1 5l7 4 7-4"/></svg><span>cheungsh@sheridancollege.ca</span></div>
+          <div class="res-row"><svg class="res-icon" viewBox="0 0 16 16"><path d="M8 2C5.8 2 4 3.8 4 6c0 3 4 8 4 8s4-5 4-8c0-2.2-1.8-4-4-4z"/><circle cx="8" cy="6" r="1.5"/></svg><span>Oakville, ON</span></div>
+          <div class="res-row"><svg class="res-icon" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M5 7v5M5 4.5v.5M11 4v8M8 7v5M8 5.5a1.5 1.5 0 013 0V7H8"/></svg><span>linkedin.com/in/sherisecheung</span></div>
+          <div class="res-row"><svg class="res-icon" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 2v12M2 8h12M3 5a10 10 0 0010 0M3 11a10 10 0 0010 0"/></svg><span>sherisecheung.framer.website</span></div>
+        </div>
+        <hr class="divider"/>
+        <div class="res-section">
+          <h2>Education</h2>
+          <div class="res-job-title">Bachelor's Degree of Interaction Design</div>
+          <div class="res-company">Sheridan College</div>
+          <div class="res-date">Sep 2023 – Present</div>
+          <div class="res-detail">GPA: 3.8 / 4.0</div>
+        </div>
+        <hr class="divider"/>
+        <div class="res-section">
+          <h2>Skills</h2>
+          <div class="res-skill-group"><div class="res-skill-label">Programming</div><div class="res-tags"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span></div></div>
+          <div class="res-skill-group"><div class="res-skill-label">Digital Tools</div><div class="res-tags"><span class="tag">Figma</span><span class="tag">Canva</span><span class="tag">Illustrator</span><span class="tag">Cinema 4D</span><span class="tag">Protopie</span><span class="tag">Tableau</span></div></div>
+          <div class="res-skill-group"><div class="res-skill-label">Languages</div><div class="res-tags"><span class="tag">English</span><span class="tag">Cantonese</span><span class="tag">Mandarin</span></div></div>
+          <div class="res-skill-group"><div class="res-skill-label">Platforms</div><div class="res-tags"><span class="tag">Desktop</span><span class="tag">iOS</span><span class="tag">Android</span></div></div>
+          <div class="res-skill-group"><div class="res-skill-label">Hardware</div><div class="res-tags"><span class="tag">Arduino IDE</span><span class="tag">Makey Makey</span></div></div>
+        </div>
+        <hr class="divider"/>
+        <div class="res-section">
+          <h2>Certifications</h2>
+          <div class="res-job-title">ProtoPie 101 Crash Course</div>
+          <div class="res-company">Protopie</div>
+          <div class="res-date">Jul 2024</div>
+          <div class="res-detail">High-fidelity interactions with ProtoPie</div>
+          <div style="margin-top:10px;">
+            <div class="res-job-title">TCPS 2: CORE 2022</div>
+            <div class="res-company">Panel on Research Ethics</div>
+            <div class="res-date">Jan 2024 – Jan 2029</div>
+            <div class="res-detail">Ethical Conduct for Research Involving Humans</div>
+          </div>
+        </div>
+      </div>
+      <div class="res-right">
+        <div class="res-section">
+          <h2>About Me</h2>
+          <p>3rd Year Interaction Design student passionate about user-centred design and digital accessibility. Design skills include UX Research, User Journey Mapping, Wireframing (Low, Mid and High), Data Visualization, and 3D Modelling.</p>
+        </div>
+        <hr class="divider"/>
+        <div class="res-section">
+          <h2>Work Experience</h2>
+          <div class="res-job-title">Administrative Assistant</div>
+          <div class="res-company">Sunny International Table Tennis Association</div>
+          <div class="res-date">Aug 2022 &nbsp;·&nbsp; Scarborough, ON</div>
+          <ul class="res-list">
+            <li><strong>Data &amp; Operations Management:</strong> Organized critical data and schedules, resulting in improved accessibility and time management for the team.</li>
+            <li><strong>Independent Execution:</strong> Handled all daily office responsibilities, increasing efficiency.</li>
+            <li><strong>Project Collaboration:</strong> Collaborated with colleagues on events and projects, directly contributing to their successful on-time delivery.</li>
+            <li><strong>Multilingual Communication:</strong> Utilized fluency in three languages to bridge communication gaps, strengthening collaboration with diverse clients and colleagues.</li>
+          </ul>
+          <div style="margin-top:14px;">
+            <div class="res-job-title">Coding Instructor</div>
+            <div class="res-company">Code Ninjas</div>
+            <div class="res-date">Feb 2022 – Jun 2022 &nbsp;·&nbsp; Richmond Hill, ON</div>
+            <ul class="res-list">
+              <li><strong>Curriculum &amp; Instruction:</strong> Designed and delivered age-appropriate coding lessons using Scratch Jr, Scratch, and Makecode, resulting in high student engagement and project completion.</li>
+              <li><strong>Classroom Management:</strong> Supervised children with a focus on safety and positivity, fostering an environment where all students felt comfortable taking creative risks.</li>
+              <li><strong>Progress &amp; Development:</strong> Implemented a consistent schedule for feedback and progress tracking, providing parents with clear visibility into their child's achievements.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sbar"><span><span class="sdot"></span>resume_jan2026.pdf</span></div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
